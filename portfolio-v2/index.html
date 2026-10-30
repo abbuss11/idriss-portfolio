@@ -66,8 +66,9 @@
         </p>
         <div class="hero__actions reveal">
           <a href="#projects" class="btn btn--primary" data-magnetic><span>Voir mes projets</span><i>→</i></a>
-          <a href="#contact" class="btn btn--ghost" data-magnetic><span>Me contacter</span></a>
+          <a href="cv/CV_Idrissa_Moutari.pdf" class="btn btn--ghost" download data-magnetic><span>Télécharger mon CV</span><i>↓</i></a>
         </div>
+        <p class="hero__hint mono reveal">Astuce : appuie sur <kbd>Ctrl</kbd> + <kbd>K</kbd> pour ouvrir ma console.</p>
         <ul class="hero__stats reveal">
           <li><strong data-count="20">0</strong><span>+ ateliers & événements</span></li>
           <li><strong data-count="7">0</strong><span>projets web &amp; impact</span></li>
@@ -381,6 +382,11 @@
       <p class="contact__desc reveal">Un projet, un poste, une collaboration ? Je réponds rapidement.</p>
       <a href="mailto:0abbuss@gmail.com" class="contact__mail reveal" data-magnetic>0abbuss@gmail.com <i>↗</i></a>
 
+      <div class="globe-wrap reveal" aria-hidden="true">
+        <canvas id="globe"></canvas>
+        <div class="globe-label mono"><span class="pulse"></span> Niamey · 13.51°N 2.11°E — ouvert au remote</div>
+      </div>
+
       <div class="contact__grid reveal">
         <a href="tel:+22799410009" class="contact__item"><span class="mono">Téléphone</span>+227 99 41 00 09</a>
         <a href="https://linkedin.com/in/idriss11" target="_blank" rel="noopener" class="contact__item"><span class="mono">LinkedIn</span>in/idriss11</a>
@@ -389,6 +395,25 @@
       </div>
     </section>
   </main>
+
+  <!-- ===== Console interactive ===== -->
+  <button class="term-fab mono" id="termFab" aria-label="Ouvrir la console" data-magnetic>&gt;_</button>
+  <div class="term" id="term" role="dialog" aria-modal="true" aria-label="Console interactive" hidden>
+    <div class="term__win">
+      <div class="term__bar">
+        <span class="term__dots"><i></i><i></i><i></i></span>
+        <span class="mono">idriss@niamey: ~/portfolio</span>
+        <button class="term__close" id="termClose" aria-label="Fermer">✕</button>
+      </div>
+      <div class="term__body mono" id="termBody"></div>
+      <form class="term__input mono" id="termForm" autocomplete="off">
+        <label for="termIn"><b>idriss@niamey</b>:<i>~</i>$</label>
+        <input id="termIn" spellcheck="false" autocapitalize="off" aria-label="Commande">
+      </form>
+      <div class="term__chips mono" id="termChips"></div>
+    </div>
+  </div>
+  <canvas id="matrix" aria-hidden="true"></canvas>
 
   <footer class="footer mono">
     <span>© <span id="year"></span> Idrissa Moutari</span>
