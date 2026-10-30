@@ -63,13 +63,21 @@
   }
 
   /* ---------- Effet machine à écrire ---------- */
-  const roles = ['Développeur Web Full-Stack', 'Webmaster & SEO', 'Laravel · React · Flutter', 'UI Designer & Graphiste', 'Lead Tech Communities'];
+  const ROLES = {
+    fr: ['Développeur Web Full-Stack', 'Webmaster & SEO', 'Laravel · React · Flutter', 'UI Designer & Graphiste', 'Lead Tech Communities'],
+    en: ['Full-Stack Web Developer', 'Webmaster & SEO', 'Laravel · React · Flutter', 'UI Designer & Graphic Artist', 'Tech Communities Lead']
+  };
+  let roles = ROLES.fr;
+  document.addEventListener('langchange', e => {
+    roles = ROLES[e.detail];
+    if (reduceMotion) typed.textContent = roles[0];
+  });
   const typed = $('#typed');
   function startTyping() {
     if (reduceMotion) { typed.textContent = roles[0]; return; }
     let r = 0, i = 0, del = false;
     (function loop() {
-      const word = roles[r];
+      const word = roles[r % roles.length];
       typed.textContent = word.slice(0, i);
       if (!del && i === word.length) { del = true; return setTimeout(loop, 1600); }
       if (del && i === 0) { del = false; r = (r + 1) % roles.length; }
@@ -647,4 +655,79 @@ github    ${link('https://github.com/abbuss11', 'abbuss11')}`),
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); term.hidden ? open() : close(); }
     else if (e.key === 'Escape') close();
   });
+})();
+
+/* =========================================================
+   Bilingue FR / EN, titre d'onglet et message pour les devs
+   ========================================================= */
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const toggle = document.getElementById('langToggle');
+  const nodes = [...document.querySelectorAll('[data-en]')];
+  nodes.forEach(el => { el.dataset.fr = el.innerHTML; });
+  let lang = 'fr';
+
+  const resplit = el => {
+    const text = el.textContent;
+    el.setAttribute('aria-label', text);
+    el.innerHTML = [...text].map((c, i) =>
+      `<span class="char" aria-hidden="true" style="--i:${i}">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+  };
+
+  function setLang(next, animate = true) {
+    if (next === lang) return;
+    lang = next;
+    document.documentElement.lang = lang;
+    toggle.classList.toggle('is-en', lang === 'en');
+    toggle.querySelectorAll('span').forEach(s => s.classList.toggle('is-on', s.dataset.l === lang));
+    toggle.setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
+    nodes.forEach(el => {
+      if (el.hasAttribute('data-split')) {
+        el.textContent = lang === 'en' ? el.dataset.en : el.dataset.fr.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ');
+        resplit(el);
+        if (el.classList.contains('is-in')) {
+          el.classList.remove('is-in'); void el.offsetWidth; el.classList.add('is-in');
+        }
+        return;
+      }
+      el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.fr;
+      if (animate && !reduceMotion) {
+        el.classList.remove('i18n-swap'); void el.offsetWidth; el.classList.add('i18n-swap');
+      }
+    });
+    document.querySelector('.glitch')?.setAttribute('data-text', 'Moutari');
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
+    if (animate && !reduceMotion) {
+      const flash = document.createElement('div');
+      flash.className = 'lang-flash';
+      document.body.appendChild(flash);
+      setTimeout(() => flash.remove(), 900);
+    }
+    try { localStorage.setItem('lang', lang); } catch (e) { /* stockage indisponible */ }
+  }
+
+  // Le texte des titres découpés en lettres doit être relu après le découpage initial
+  document.querySelectorAll('[data-split][data-en]').forEach(el => {
+    el.dataset.fr = el.getAttribute('aria-label') || el.textContent;
+  });
+
+  toggle.addEventListener('click', () => setLang(lang === 'fr' ? 'en' : 'fr'));
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) { /* stockage indisponible */ }
+  const wanted = location.hash === '#en' ? 'en' : saved;
+  if (wanted === 'en') setLang('en', false);
+
+  /* ---------- Titre d'onglet ---------- */
+  const titles = { fr: '👋 Reviens, le code t’attend !', en: '👋 Come back, the code is waiting!' };
+  const original = document.title;
+  document.addEventListener('visibilitychange', () => {
+    document.title = document.hidden ? titles[lang] : original;
+  });
+
+  /* ---------- Message caché dans la console du navigateur ---------- */
+  console.log(
+    '%c IM.dev %c Psst… tu inspectes mon code ? On devrait travailler ensemble → 0abbuss@gmail.com ',
+    'background:linear-gradient(90deg,#22e4ff,#8b5cff,#ff3fa4);color:#05060a;font-weight:700;padding:6px 10px;border-radius:6px 0 0 6px',
+    'background:#0b0d16;color:#22e4ff;padding:6px 10px;border-radius:0 6px 6px 0'
+  );
 })();

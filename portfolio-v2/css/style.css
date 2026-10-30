@@ -457,6 +457,30 @@ kbd { font-family: var(--mono); font-size: .72rem; padding: .1rem .4rem; border-
 /* ---------- Texte brouillé ---------- */
 .scramble-char { color: var(--cyan); }
 
+/* ---------- Sélecteur de langue ---------- */
+.nav__links { margin-left: auto; }
+.lang {
+  margin-left: auto; position: relative; display: inline-flex; align-items: center;
+  padding: 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  font-size: .72rem; isolation: isolate;
+}
+.lang span { position: relative; z-index: 1; width: 34px; padding: .35rem 0; text-align: center; color: var(--muted); transition: color .4s var(--ease); }
+.lang span.is-on { color: var(--bg); }
+.lang i {
+  position: absolute; z-index: 0; top: 4px; bottom: 4px; left: 4px; width: 34px; border-radius: 999px;
+  background: var(--grad); box-shadow: 0 0 14px rgba(34, 228, 255, .5); transition: transform .5s var(--ease);
+}
+.lang.is-en i { transform: translateX(34px); }
+.lang:hover { border-color: rgba(34, 228, 255, .5); }
+.i18n-swap { animation: swapIn .7s var(--ease) both; }
+@keyframes swapIn { from { opacity: 0; filter: blur(6px); transform: translateY(8px); } }
+.lang-flash {
+  position: fixed; inset: 0; z-index: 940; pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(34, 228, 255, .16) 45%, rgba(139, 92, 255, .2) 55%, transparent 70%);
+  transform: translateX(-100%); animation: langSweep .8s var(--ease) forwards;
+}
+@keyframes langSweep { to { transform: translateX(100%); } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .skills { grid-template-columns: 1fr 1fr; }
@@ -473,6 +497,7 @@ kbd { font-family: var(--mono); font-size: .72rem; padding: .1rem .4rem; border-
   .nav__links a::before { font-size: .8rem; }
   .nav.is-open .nav__links { clip-path: circle(150% at calc(100% - 40px) 40px); }
   .nav__cta { display: none; }
+  .lang { margin-right: .4rem; }
   .nav__burger { display: block; }
   .hero { grid-template-columns: 1fr; padding-top: 7.5rem; text-align: left; gap: 4rem; }
   .hero__visual { order: -1; }

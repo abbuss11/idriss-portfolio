@@ -38,13 +38,14 @@
   <header class="nav" id="nav">
     <a href="#hero" class="nav__logo" data-magnetic>IM<span>.</span>dev</a>
     <nav class="nav__links" id="navLinks">
-      <a href="#about" data-index="01">Profil</a>
+      <a href="#about" data-index="01" data-en="Profile">Profil</a>
       <a href="#skills" data-index="02">Stack</a>
-      <a href="#experience" data-index="03">Parcours</a>
-      <a href="#projects" data-index="04">Projets</a>
+      <a href="#experience" data-index="03" data-en="Journey">Parcours</a>
+      <a href="#projects" data-index="04" data-en="Projects">Projets</a>
       <a href="#contact" data-index="05">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn--ghost nav__cta" data-magnetic>Me recruter</a>
+    <button class="lang mono" id="langToggle" aria-label="Switch to English" title="FR / EN"><span class="is-on" data-l="fr">FR</span><i></i><span data-l="en">EN</span></button>
+    <a href="#contact" class="btn btn--ghost nav__cta" data-magnetic data-en="Hire me">Me recruter</a>
     <button class="nav__burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span></button>
   </header>
 
@@ -52,7 +53,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
       <div class="hero__content">
-        <p class="hero__tag mono reveal"><span class="pulse"></span> Disponible pour une opportunité · Niamey, Niger</p>
+        <p class="hero__tag mono reveal" data-en="&lt;span class=&quot;pulse&quot;&gt;&lt;/span&gt; Open to opportunities · Niamey, Niger"><span class="pulse"></span> Disponible pour une opportunité · Niamey, Niger</p>
         <h1 class="hero__title">
           <span class="line"><span class="split" data-split>Idrissa</span></span>
           <span class="line"><span class="split glitch" data-split data-text="Moutari">Moutari</span></span>
@@ -60,18 +61,18 @@
         <p class="hero__role mono reveal">
           &gt; <span id="typed"></span><span class="caret">|</span>
         </p>
-        <p class="hero__desc reveal">
+        <p class="hero__desc reveal" data-en="Software Engineering graduate. I design, build and grow websites and web apps — platforms, management tools, event sites — that are fast, visible and polished.">
           Diplômé en Génie logiciel, je conçois, développe et fais évoluer des sites et applications web —
           plateformes, outils de gestion, sites événementiels — rapides, visibles et soignés.
         </p>
         <div class="hero__actions reveal">
-          <a href="#projects" class="btn btn--primary" data-magnetic><span>Voir mes projets</span><i>→</i></a>
-          <a href="cv/CV_Idrissa_Moutari.pdf" class="btn btn--ghost" download data-magnetic><span>Télécharger mon CV</span><i>↓</i></a>
+          <a href="#projects" class="btn btn--primary" data-magnetic data-en="&lt;span&gt;See my work&lt;/span&gt;&lt;i&gt;→&lt;/i&gt;"><span>Voir mes projets</span><i>→</i></a>
+          <a href="cv/CV_Idrissa_Moutari.pdf" class="btn btn--ghost" download data-magnetic data-en="&lt;span&gt;Download my CV&lt;/span&gt;&lt;i&gt;↓&lt;/i&gt;"><span>Télécharger mon CV</span><i>↓</i></a>
         </div>
-        <p class="hero__hint mono reveal">Astuce : appuie sur <kbd>Ctrl</kbd> + <kbd>K</kbd> pour ouvrir ma console.</p>
+        <p class="hero__hint mono reveal" data-en="Tip: press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;K&lt;/kbd&gt; to open my console.">Astuce : appuie sur <kbd>Ctrl</kbd> + <kbd>K</kbd> pour ouvrir ma console.</p>
         <ul class="hero__stats reveal">
-          <li><strong data-count="20">0</strong><span>+ ateliers & événements</span></li>
-          <li><strong data-count="7">0</strong><span>projets web &amp; impact</span></li>
+          <li><strong data-count="20">0</strong><span data-en="+ workshops &amp; events">+ ateliers & événements</span></li>
+          <li><strong data-count="7">0</strong><span data-en="web &amp; impact projects">projets web &amp; impact</span></li>
           <li><strong data-count="9">0</strong><span>certifications</span></li>
         </ul>
       </div>
@@ -105,23 +106,23 @@
     <!-- ===== PROFIL ===== -->
     <section class="section" id="about">
       <header class="section__head">
-        <span class="section__index mono">01 / Profil</span>
-        <h2 class="section__title reveal">Du code, du design<br><em>et de la visibilité.</em></h2>
+        <span class="section__index mono" data-en="01 / Profile">01 / Profil</span>
+        <h2 class="section__title reveal" data-en="Code, design&lt;br&gt;&lt;em&gt;and visibility.&lt;/em&gt;">Du code, du design<br><em>et de la visibilité.</em></h2>
       </header>
       <div class="about">
         <div class="about__text reveal">
-          <p class="lead">
+          <p class="lead" data-en="Software Engineering graduate and digital specialist, I build complete web products: from data modelling to deployment, including visual identity and search optimisation.">
             Développeur diplômé en Génie logiciel et spécialiste digital, je construis des produits web complets :
             de la modélisation des données jusqu'à la mise en ligne, en passant par l'identité visuelle et le référencement.
           </p>
-          <p>
+          <p data-en="Comfortable with CMSs, strong in SEO and digital content, I know how to keep a website up to date and make it visible. Rigorous, autonomous and used to shipping on time, I am looking for a role where I can contribute to ambitious company projects.">
             À l'aise avec les CMS, avec une bonne maîtrise du SEO et de la production de contenus digitaux, je sais maintenir
             un site à jour et le rendre visible. Rigoureux, autonome et habitué à livrer dans les délais, je recherche une
             opportunité pour contribuer au développement de projets d'entreprise.
           </p>
           <div class="about__langs">
-            <span class="mono">Langues</span>
-            <ul class="chips">
+            <span class="mono" data-en="Languages">Langues</span>
+            <ul class="chips" data-en="&lt;li&gt;French&lt;/li&gt;&lt;li&gt;English · Intermediate&lt;/li&gt;&lt;li&gt;Hausa&lt;/li&gt;&lt;li&gt;Zarma&lt;/li&gt;">
               <li>Français</li><li>Anglais · Intermédiaire</li><li>Haoussa</li><li>Zarma</li>
             </ul>
           </div>
@@ -129,23 +130,23 @@
         <div class="about__cards">
           <article class="card card--glow reveal" data-tilt>
             <div class="card__icon">⌘</div>
-            <h3>Développement web</h3>
-            <p>Applications Laravel / Inertia, front React & Vue, API REST, bases MySQL & PostgreSQL.</p>
+            <h3 data-en="Web development">Développement web</h3>
+            <p data-en="Laravel / Inertia apps, React &amp; Vue front-ends, REST APIs, MySQL &amp; PostgreSQL databases.">Applications Laravel / Inertia, front React & Vue, API REST, bases MySQL & PostgreSQL.</p>
           </article>
           <article class="card card--glow reveal" data-tilt>
             <div class="card__icon">◎</div>
             <h3>Webmaster & SEO</h3>
-            <p>WordPress, Moodle, optimisation SEO, stratégie de contenu, Google Ads et réseaux sociaux.</p>
+            <p data-en="WordPress, Moodle, SEO, content strategy, Google Ads and social media.">WordPress, Moodle, optimisation SEO, stratégie de contenu, Google Ads et réseaux sociaux.</p>
           </article>
           <article class="card card--glow reveal" data-tilt>
             <div class="card__icon">◆</div>
-            <h3>Design & identité</h3>
-            <p>Interfaces Figma / Adobe XD, logos, affiches et supports de communication.</p>
+            <h3 data-en="Design &amp; branding">Design & identité</h3>
+            <p data-en="Figma / Adobe XD interfaces, logos, posters and marketing materials.">Interfaces Figma / Adobe XD, logos, affiches et supports de communication.</p>
           </article>
           <article class="card card--glow reveal" data-tilt>
             <div class="card__icon">▲</div>
             <h3>Leadership tech</h3>
-            <p>Coordination d'équipes de bénévoles, 20+ ateliers, meetups et hackathons organisés.</p>
+            <p data-en="Leading volunteer teams; 20+ workshops, meetups and hackathons organised.">Coordination d'équipes de bénévoles, 20+ ateliers, meetups et hackathons organisés.</p>
           </article>
         </div>
       </div>
@@ -155,7 +156,7 @@
     <section class="section" id="skills">
       <header class="section__head">
         <span class="section__index mono">02 / Stack</span>
-        <h2 class="section__title reveal">Une boîte à outils<br><em>full-stack.</em></h2>
+        <h2 class="section__title reveal" data-en="A full-stack&lt;br&gt;&lt;em&gt;toolbox.&lt;/em&gt;">Une boîte à outils<br><em>full-stack.</em></h2>
       </header>
 
       <div class="skills">
@@ -169,21 +170,21 @@
         <div class="skill-group reveal">
           <h3 class="mono">// Mobile</h3>
           <ul class="chips"><li>Flutter</li><li>Ionic</li></ul>
-          <h3 class="mono">// Bases de données</h3>
+          <h3 class="mono" data-en="// Databases">// Bases de données</h3>
           <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>Firebase</li><li>Supabase</li></ul>
         </div>
         <div class="skill-group reveal">
-          <h3 class="mono">// Hébergement & outils</h3>
+          <h3 class="mono" data-en="// Hosting &amp; tools">// Hébergement & outils</h3>
           <ul class="chips"><li>Git / GitHub / GitLab</li><li>Netlify</li><li>Vercel</li><li>Render</li><li>VPS</li><li>Postman</li></ul>
-          <h3 class="mono">// Programmation</h3>
+          <h3 class="mono" data-en="// Programming">// Programmation</h3>
           <ul class="chips"><li>JavaScript</li><li>PHP</li><li>Python</li><li>C</li></ul>
         </div>
         <div class="skill-group reveal">
-          <h3 class="mono">// SEO & contenu</h3>
-          <ul class="chips"><li>Optimisation SEO</li><li>Stratégie de contenu</li><li>Réseaux sociaux</li><li>Google Ads</li></ul>
+          <h3 class="mono" data-en="// SEO &amp; content">// SEO & contenu</h3>
+          <ul class="chips" data-en="&lt;li&gt;SEO optimisation&lt;/li&gt;&lt;li&gt;Content strategy&lt;/li&gt;&lt;li&gt;Social media&lt;/li&gt;&lt;li&gt;Google Ads&lt;/li&gt;"><li>Optimisation SEO</li><li>Stratégie de contenu</li><li>Réseaux sociaux</li><li>Google Ads</li></ul>
           <h3 class="mono">// Design</h3>
           <ul class="chips"><li>Figma</li><li>Adobe XD</li><li>Photoshop</li><li>Canva</li></ul>
-          <h3 class="mono">// Gestion de projet</h3>
+          <h3 class="mono" data-en="// Project management">// Gestion de projet</h3>
           <ul class="chips"><li>Agile</li><li>Jira</li><li>Miro</li><li>Google Workspace</li><li>MS Office</li></ul>
         </div>
       </div>
@@ -192,7 +193,7 @@
         <div class="meter"><span class="mono">Laravel / PHP</span><div class="meter__bar"><i style="--v:90%"></i></div></div>
         <div class="meter"><span class="mono">React / Vue</span><div class="meter__bar"><i style="--v:80%"></i></div></div>
         <div class="meter"><span class="mono">WordPress / CMS</span><div class="meter__bar"><i style="--v:90%"></i></div></div>
-        <div class="meter"><span class="mono">SEO & contenu</span><div class="meter__bar"><i style="--v:85%"></i></div></div>
+        <div class="meter"><span class="mono" data-en="SEO &amp; content">SEO & contenu</span><div class="meter__bar"><i style="--v:85%"></i></div></div>
         <div class="meter"><span class="mono">UI Design</span><div class="meter__bar"><i style="--v:80%"></i></div></div>
         <div class="meter"><span class="mono">Flutter / mobile</span><div class="meter__bar"><i style="--v:65%"></i></div></div>
       </div>
@@ -201,62 +202,62 @@
     <!-- ===== PARCOURS ===== -->
     <section class="section" id="experience">
       <header class="section__head">
-        <span class="section__index mono">03 / Parcours</span>
-        <h2 class="section__title reveal">Expérience<br><em>& formation.</em></h2>
+        <span class="section__index mono" data-en="03 / Journey">03 / Parcours</span>
+        <h2 class="section__title reveal" data-en="Experience&lt;br&gt;&lt;em&gt;&amp; education.&lt;/em&gt;">Expérience<br><em>& formation.</em></h2>
       </header>
 
       <div class="timeline" id="timeline">
         <div class="timeline__line"><i id="timelineFill"></i></div>
 
         <article class="tl-item reveal">
-          <span class="tl-item__date mono">Déc. 2025 — Avr. 2026</span>
-          <h3>Développeur logiciel <small>· stage académique</small></h3>
+          <span class="tl-item__date mono" data-en="Dec 2025 — Apr 2026">Déc. 2025 — Avr. 2026</span>
+          <h3 data-en="Software developer &lt;small&gt;· academic internship&lt;/small&gt;">Développeur logiciel <small>· stage académique</small></h3>
           <p class="tl-item__org">Futuristic Africa Lab (FAL) · Niamey</p>
           <ul>
-            <li>Conception et développement de FAL-PMS, de la modélisation MERISE à l'implémentation complète (Laravel, Inertia.js, TailwindCSS, MySQL).</li>
-            <li>Participation au développement de Nexus Connect, application mobile de réseau social du programme Nexus Youth.</li>
+            <li data-en="Designed and built FAL-PMS, from MERISE modelling to full implementation (Laravel, Inertia.js, TailwindCSS, MySQL).">Conception et développement de FAL-PMS, de la modélisation MERISE à l'implémentation complète (Laravel, Inertia.js, TailwindCSS, MySQL).</li>
+            <li data-en="Contributed to Nexus Connect, the social network mobile app of the Nexus Youth programme.">Participation au développement de Nexus Connect, application mobile de réseau social du programme Nexus Youth.</li>
           </ul>
         </article>
 
         <article class="tl-item reveal">
-          <span class="tl-item__date mono">Fév. 2025 — Août 2026</span>
-          <h3>Responsable des Tech Communities Clubs <small>· Lead TCC</small></h3>
+          <span class="tl-item__date mono" data-en="Feb 2025 — Aug 2026">Fév. 2025 — Août 2026</span>
+          <h3 data-en="Tech Communities Clubs Lead &lt;small&gt;· Lead TCC&lt;/small&gt;">Responsable des Tech Communities Clubs <small>· Lead TCC</small></h3>
           <p class="tl-item__org">EPI-Niger · Niamey</p>
           <ul>
-            <li>Coordination d'une équipe de bénévoles et organisation de 20+ ateliers, conférences, meetups, formations et hackathons.</li>
-            <li>Responsable technique et contenu de DevWeek 2025 : site officiel, identité visuelle, photo et couverture média.</li>
-            <li>Conception de la plateforme d'évaluation et de classement des équipes finalistes du hackathon DevWeek 2025.</li>
+            <li data-en="Led a volunteer team and organised 20+ workshops, talks, meetups, trainings and hackathons.">Coordination d'une équipe de bénévoles et organisation de 20+ ateliers, conférences, meetups, formations et hackathons.</li>
+            <li data-en="Technical and content lead for DevWeek 2025: official website, visual identity, photography and media coverage.">Responsable technique et contenu de DevWeek 2025 : site officiel, identité visuelle, photo et couverture média.</li>
+            <li data-en="Built the platform used to score and rank the DevWeek 2025 hackathon finalists.">Conception de la plateforme d'évaluation et de classement des équipes finalistes du hackathon DevWeek 2025.</li>
           </ul>
         </article>
 
         <article class="tl-item reveal">
           <span class="tl-item__date mono">2024 — 2026</span>
-          <h3>Graphiste & Community Manager</h3>
-          <p class="tl-item__org">Indépendant</p>
+          <h3 data-en="Graphic designer &amp; community manager">Graphiste & Community Manager</h3>
+          <p class="tl-item__org" data-en="Freelance">Indépendant</p>
           <ul>
-            <li>Flyers, logos, affiches et supports de communication (Photoshop, Canva) ; gestion de la présence sur les réseaux sociaux de clients.</li>
+            <li data-en="Flyers, logos, posters and marketing materials (Photoshop, Canva); social media management for clients.">Flyers, logos, affiches et supports de communication (Photoshop, Canva) ; gestion de la présence sur les réseaux sociaux de clients.</li>
           </ul>
         </article>
 
         <article class="tl-item reveal">
           <span class="tl-item__date mono">2022 — 2024</span>
-          <h3>Technicien de maintenance informatique</h3>
+          <h3 data-en="IT maintenance technician">Technicien de maintenance informatique</h3>
           <p class="tl-item__org">MI+ · Niger</p>
           <ul>
-            <li>Installation, configuration, maintenance préventive et corrective, dépannage informatique.</li>
+            <li data-en="Installation, configuration, preventive and corrective maintenance, IT troubleshooting.">Installation, configuration, maintenance préventive et corrective, dépannage informatique.</li>
           </ul>
         </article>
 
         <article class="tl-item tl-item--edu reveal">
-          <span class="tl-item__date mono">Oct. 2023 — Août 2026</span>
-          <h3>Licence professionnelle en Génie logiciel <small>· soutenue</small></h3>
+          <span class="tl-item__date mono" data-en="Oct 2023 — Aug 2026">Oct. 2023 — Août 2026</span>
+          <h3 data-en="Professional Bachelor&#x27;s in Software Engineering &lt;small&gt;· defended&lt;/small&gt;">Licence professionnelle en Génie logiciel <small>· soutenue</small></h3>
           <p class="tl-item__org">EPI-Niger · Niamey</p>
         </article>
 
         <article class="tl-item tl-item--edu reveal">
           <span class="tl-item__date mono">2023</span>
-          <h3>Bac pro Maintenance informatique et électronique</h3>
-          <p class="tl-item__org">Lycée Professionnel de Zinder</p>
+          <h3 data-en="Vocational baccalaureate in IT &amp; electronics maintenance">Bac pro Maintenance informatique et électronique</h3>
+          <p class="tl-item__org" data-en="Zinder Vocational High School">Lycée Professionnel de Zinder</p>
         </article>
       </div>
     </section>
@@ -264,13 +265,13 @@
     <!-- ===== PROJETS ===== -->
     <section class="section" id="projects">
       <header class="section__head">
-        <span class="section__index mono">04 / Projets</span>
-        <h2 class="section__title reveal">Projets web,<br><em>civic tech & impact.</em></h2>
+        <span class="section__index mono" data-en="04 / Projects">04 / Projets</span>
+        <h2 class="section__title reveal" data-en="Web projects,&lt;br&gt;&lt;em&gt;civic tech &amp; impact.&lt;/em&gt;">Projets web,<br><em>civic tech & impact.</em></h2>
       </header>
 
       <div class="filters reveal" role="tablist">
-        <button class="filter is-active" data-filter="all">Tous</button>
-        <button class="filter" data-filter="web">Web & logiciel</button>
+        <button class="filter is-active" data-filter="all" data-en="All">Tous</button>
+        <button class="filter" data-filter="web" data-en="Web &amp; software">Web & logiciel</button>
         <button class="filter" data-filter="impact">Civic tech & impact</button>
       </div>
 
@@ -278,10 +279,10 @@
         <article class="project project--featured reveal" data-cat="web" data-tilt>
           <div class="project__num mono">01</div>
           <div class="project__body">
-            <span class="project__kind mono">Projet de fin d'études</span>
+            <span class="project__kind mono" data-en="Final-year project">Projet de fin d'études</span>
             <h3>FAL-PMS</h3>
-            <p class="project__sub">Gestion de projet Agile collaborative</p>
-            <p>Application web multi-utilisateurs pour planifier, suivre et piloter des projets en équipe — de l'analyse des besoins et la modélisation (MCD / MLD / MPD) jusqu'à la mise en œuvre complète.</p>
+            <p class="project__sub" data-en="Collaborative Agile project management">Gestion de projet Agile collaborative</p>
+            <p data-en="Multi-user web app to plan, track and steer team projects — from requirements analysis and data modelling (MCD / MLD / MPD) to full implementation.">Application web multi-utilisateurs pour planifier, suivre et piloter des projets en équipe — de l'analyse des besoins et la modélisation (MCD / MLD / MPD) jusqu'à la mise en œuvre complète.</p>
             <ul class="tags mono"><li>Laravel</li><li>Inertia.js</li><li>TailwindCSS</li><li>MySQL</li><li>MERISE</li></ul>
           </div>
           <div class="project__visual" aria-hidden="true">
@@ -291,17 +292,17 @@
 
         <article class="project reveal" data-cat="web" data-tilt>
           <div class="project__num mono">02</div>
-          <span class="project__kind mono">Site événementiel</span>
+          <span class="project__kind mono" data-en="Event website">Site événementiel</span>
           <h3>Nexus Youth Summit</h3>
-          <p>Site bilingue FR/EN avec générateur d'affiches « J'y serai », gestion des participants et tableau de bord KPI (visites, clics, affiches générées), accès admin sécurisé.</p>
+          <p data-en="Bilingual FR/EN site with an “I&#x27;ll be there” poster generator, attendee management and a KPI dashboard (visits, clicks, posters generated), with secure admin access.">Site bilingue FR/EN avec générateur d'affiches « J'y serai », gestion des participants et tableau de bord KPI (visites, clics, affiches générées), accès admin sécurisé.</p>
           <ul class="tags mono"><li>React</li><li>TailwindCSS</li><li>Framer Motion</li><li>Supabase</li></ul>
         </article>
 
         <article class="project reveal" data-cat="web" data-tilt>
           <div class="project__num mono">03</div>
-          <span class="project__kind mono">Temps réel</span>
-          <h3>Plateforme d'évaluation DevWeek 2025</h3>
-          <p>Outil d'évaluation, de classement et de suivi des équipes finalistes du hackathon, utilisé par le jury pendant l'événement.</p>
+          <span class="project__kind mono" data-en="Real time">Temps réel</span>
+          <h3 data-en="DevWeek 2025 judging platform">Plateforme d'évaluation DevWeek 2025</h3>
+          <p data-en="Scoring, ranking and tracking tool for the hackathon finalists, used by the jury during the event.">Outil d'évaluation, de classement et de suivi des équipes finalistes du hackathon, utilisé par le jury pendant l'événement.</p>
           <ul class="tags mono"><li>Web</li><li>Classement live</li></ul>
         </article>
 
@@ -309,7 +310,7 @@
           <div class="project__num mono">04</div>
           <span class="project__kind mono">Mobile</span>
           <h3>MyPocket</h3>
-          <p>Application de suivi des revenus et dépenses par catégorie pour aider chacun à planifier et maîtriser son budget.</p>
+          <p data-en="Income and expense tracker by category that helps people plan and control their budget.">Application de suivi des revenus et dépenses par catégorie pour aider chacun à planifier et maîtriser son budget.</p>
           <ul class="tags mono"><li>Ionic</li><li>React</li></ul>
         </article>
 
@@ -317,23 +318,23 @@
           <div class="project__num mono">05</div>
           <span class="project__kind mono">Hackathon · MVP mobile</span>
           <h3>PROOF</h3>
-          <p>Vérification et traçabilité du foncier au Niger : carte interactive, certificats avec QR code, mode hors-ligne et signalement de litiges. 15 écrans, équipe de 3 développeurs.</p>
+          <p data-en="Land-ownership verification and traceability in Niger: interactive map, QR-code certificates, offline mode and dispute reporting. 15 screens, built by a team of 3 developers.">Vérification et traçabilité du foncier au Niger : carte interactive, certificats avec QR code, mode hors-ligne et signalement de litiges. 15 écrans, équipe de 3 développeurs.</p>
           <ul class="tags mono"><li>Flutter</li><li>Firebase</li><li>Google Maps</li></ul>
         </article>
 
         <article class="project reveal" data-cat="impact" data-tilt>
           <div class="project__num mono">06</div>
-          <span class="project__kind mono">Signalement citoyen</span>
+          <span class="project__kind mono" data-en="Civic reporting">Signalement citoyen</span>
           <h3>227 Cadre de Vie</h3>
-          <p>Plateforme de signalement des problèmes urbains à Niamey : portail web, app mobile, back-office communal et app pour agents de terrain.</p>
+          <p data-en="Platform for reporting urban issues in Niamey: web portal, mobile app, city back-office and an app for field agents.">Plateforme de signalement des problèmes urbains à Niamey : portail web, app mobile, back-office communal et app pour agents de terrain.</p>
           <ul class="tags mono"><li>Web</li><li>Mobile</li><li>WhatsApp / SMS / USSD</li></ul>
         </article>
 
         <article class="project reveal" data-cat="impact" data-tilt>
           <div class="project__num mono">07</div>
-          <span class="project__kind mono">IA · Emploi</span>
+          <span class="project__kind mono" data-en="AI · Jobs">IA · Emploi</span>
           <h3>Taza</h3>
-          <p>Chatbot WhatsApp pour l'emploi au Sahel : mise en relation avec des offres grâce à un appariement sémantique. Pitch et modèle économique complets.</p>
+          <p data-en="WhatsApp chatbot for jobs in the Sahel: matches people with offers using semantic search. Full pitch and business model.">Chatbot WhatsApp pour l'emploi au Sahel : mise en relation avec des offres grâce à un appariement sémantique. Pitch et modèle économique complets.</p>
           <ul class="tags mono"><li>Python</li><li>FastAPI</li><li>WhatsApp API</li><li>LLM</li></ul>
         </article>
       </div>
@@ -342,32 +343,32 @@
     <!-- ===== DISTINCTIONS & CERTIFS ===== -->
     <section class="section" id="awards">
       <header class="section__head">
-        <span class="section__index mono">✦ / Distinctions</span>
-        <h2 class="section__title reveal">Reconnaissances<br><em>& certifications.</em></h2>
+        <span class="section__index mono" data-en="✦ / Awards">✦ / Distinctions</span>
+        <h2 class="section__title reveal" data-en="Awards&lt;br&gt;&lt;em&gt;&amp; certifications.&lt;/em&gt;">Reconnaissances<br><em>& certifications.</em></h2>
       </header>
 
       <div class="awards">
         <article class="award card--glow reveal" data-tilt>
-          <span class="award__badge mono">Finaliste</span>
+          <span class="award__badge mono" data-en="Finalist">Finaliste</span>
           <h3>UNESCO Youth Hackathon 2025</h3>
-          <p>« Youth Leading the Way – Building MIL Solutions for Impact ». Chatbot de lutte contre la désinformation : analyse de fiabilité d'un message ou d'un lien, pistes de vérification et conseils d'éducation aux médias.</p>
+          <p data-en="“Youth Leading the Way – Building MIL Solutions for Impact”. A chatbot that fights misinformation: it rates how reliable a message or link is, suggests ways to verify it and gives media-literacy tips.">« Youth Leading the Way – Building MIL Solutions for Impact ». Chatbot de lutte contre la désinformation : analyse de fiabilité d'un message ou d'un lien, pistes de vérification et conseils d'éducation aux médias.</p>
         </article>
         <article class="award card--glow reveal" data-tilt>
           <span class="award__badge mono">Alumni</span>
           <h3>Nexus Youth Program</h3>
-          <p>Formation en civisme, citoyenneté et cyber-citoyenneté, financée par l'Ambassade des États-Unis à Niamey.</p>
+          <p data-en="Training in civics, citizenship and digital citizenship, funded by the U.S. Embassy in Niamey.">Formation en civisme, citoyenneté et cyber-citoyenneté, financée par l'Ambassade des États-Unis à Niamey.</p>
         </article>
       </div>
 
       <ul class="certs reveal">
         <li><b>CS50x · Computer Science</b><span>Harvard University · 2025</span></li>
-        <li><b>Marketing digital</b><span>Force-N Sénégal · 2025</span></li>
+        <li data-en="&lt;b&gt;Digital marketing&lt;/b&gt;&lt;span&gt;Force-N Senegal · 2025&lt;/span&gt;"><b>Marketing digital</b><span>Force-N Sénégal · 2025</span></li>
         <li><b>Responsive Web Design</b><span>freeCodeCamp · 2024</span></li>
         <li><b>Design Thinking</b><span>HP LIFE · 2024</span></li>
-        <li><b>Gestion de projet</b><span>LinkedIn Learning · 2024</span></li>
+        <li data-en="&lt;b&gt;Project management&lt;/b&gt;&lt;span&gt;LinkedIn Learning · 2024&lt;/span&gt;"><b>Gestion de projet</b><span>LinkedIn Learning · 2024</span></li>
         <li><b>AWS Cloud Essentials</b><span>LeCloudFacile · 2024</span></li>
         <li><b>Data Analysis</b><span>UNICEF · 2024</span></li>
-        <li><b>Suivi-évaluation de projet</b><span>Campus AFD · 2024</span></li>
+        <li data-en="&lt;b&gt;Project monitoring &amp; evaluation&lt;/b&gt;&lt;span&gt;Campus AFD · 2024&lt;/span&gt;"><b>Suivi-évaluation de projet</b><span>Campus AFD · 2024</span></li>
         <li><b>SQL · NoSQL</b><span>SoloLearn · Simplilearn · 2024</span></li>
       </ul>
     </section>
@@ -376,22 +377,22 @@
     <section class="section contact" id="contact">
       <span class="section__index mono">05 / Contact</span>
       <h2 class="contact__title">
-        <span class="line"><span class="split" data-split>Construisons</span></span>
-        <span class="line"><span class="split gradient-text" data-split>ensemble.</span></span>
+        <span class="line"><span class="split" data-split data-en="Let&#x27;s build">Construisons</span></span>
+        <span class="line"><span class="split gradient-text" data-split data-en="together.">ensemble.</span></span>
       </h2>
-      <p class="contact__desc reveal">Un projet, un poste, une collaboration ? Je réponds rapidement.</p>
+      <p class="contact__desc reveal" data-en="A project, a job, a collaboration? I reply fast.">Un projet, un poste, une collaboration ? Je réponds rapidement.</p>
       <a href="mailto:0abbuss@gmail.com" class="contact__mail reveal" data-magnetic>0abbuss@gmail.com <i>↗</i></a>
 
       <div class="globe-wrap reveal" aria-hidden="true">
         <canvas id="globe"></canvas>
-        <div class="globe-label mono"><span class="pulse"></span> Niamey · 13.51°N 2.11°E — ouvert au remote</div>
+        <div class="globe-label mono" data-en="&lt;span class=&quot;pulse&quot;&gt;&lt;/span&gt; Niamey · 13.51°N 2.11°E — open to remote"><span class="pulse"></span> Niamey · 13.51°N 2.11°E — ouvert au remote</div>
       </div>
 
       <div class="contact__grid reveal">
-        <a href="tel:+22799410009" class="contact__item"><span class="mono">Téléphone</span>+227 99 41 00 09</a>
+        <a href="tel:+22799410009" class="contact__item" data-en="&lt;span class=&quot;mono&quot;&gt;Phone&lt;/span&gt;+227 99 41 00 09"><span class="mono">Téléphone</span>+227 99 41 00 09</a>
         <a href="https://linkedin.com/in/idriss11" target="_blank" rel="noopener" class="contact__item"><span class="mono">LinkedIn</span>in/idriss11</a>
         <a href="https://github.com/abbuss11" target="_blank" rel="noopener" class="contact__item"><span class="mono">GitHub</span>abbuss11</a>
-        <div class="contact__item"><span class="mono">Localisation</span>Niamey, Niger</div>
+        <div class="contact__item" data-en="&lt;span class=&quot;mono&quot;&gt;Location&lt;/span&gt;Niamey, Niger"><span class="mono">Localisation</span>Niamey, Niger</div>
       </div>
     </section>
   </main>
@@ -417,8 +418,8 @@
 
   <footer class="footer mono">
     <span>© <span id="year"></span> Idrissa Moutari</span>
-    <span>Conçu & codé à Niamey ✦</span>
-    <a href="#hero" data-magnetic>Retour en haut ↑</a>
+    <span data-en="Designed &amp; coded in Niamey ✦">Conçu & codé à Niamey ✦</span>
+    <a href="#hero" data-magnetic data-en="Back to top ↑">Retour en haut ↑</a>
   </footer>
 
   <script src="js/main.js"></script>
